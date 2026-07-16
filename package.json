@@ -1,0 +1,14 @@
+{
+  "name": "stadium-smart-ai-bot-chat",
+  "version": "1.0.0",
+  "description": "Stadium AI — smart assistant for fans",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js",
+    "seed": "node backend/database/seed.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

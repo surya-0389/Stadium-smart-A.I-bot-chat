@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Stadium AI Assistant</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="bot1.css">
+
+</head>
+
+<body>
+
+<div class="chat-container">
+
+<div class="header">
+
+<div class="logo">🏟️</div>
+
+<div class="header-text">
+<h2>Stadium AI Assistant</h2>
+<p id="userBadge">Multilingual · Live Backend</p>
+</div>
+<button class="logout-btn" id="logoutBtn" title="Logout">⏻</button>
+
+</div>
+
+<div class="lang-bar">
+<button class="lang-btn active" data-lang="en" title="English">EN</button>
+<button class="lang-btn" data-lang="hi" title="हिंदी">हि</button>
+<button class="lang-btn" data-lang="hinglish" title="Hinglish">HiEn</button>
+<button class="lang-btn" data-lang="ta" title="தமிழ்">த</button>
+<button class="lang-btn" data-lang="bn" title="বাংলা">ব</button>
+</div>
+
+<div class="quick-actions">
+<button class="quick-btn" data-emoji="🪑" data-query="Find my seat Section 201 Row 14 Seat 8">🪑 Find seat</button>
+<button class="quick-btn" data-emoji="🍔" data-query="Where is food counter?">🍔 Food</button>
+<button class="quick-btn" data-emoji="🚪" data-query="Which gate has less crowd?">🚪 Gates</button>
+<button class="quick-btn" data-emoji="🚌" data-query="Bus to railway station">🚌 Transport</button>
+<button class="quick-btn" data-emoji="🚻" data-query="Where is restroom?">🚻 Restroom</button>
+<button class="quick-btn" data-emoji="🎫" data-query="Show my tickets">🎫 My tickets</button>
+<button class="quick-btn" data-emoji="🆘" data-query="Emergency help">🆘 Help</button>
+</div>
+
+<div class="chat-box" id="chatBox">
+
+<div class="bot">
+Hello 👋<br><br>
+Welcome to <b>Stadium AI Assistant</b> — powered by Generative AI.<br><br>
+I can help you find your <b>seat</b>, locate <b>food & ticket counters</b>, navigate <b>gates</b>, and plan <b>bus/metro</b> after the match.<br><br>
+Ask in <b>English, Hindi, Hinglish, Tamil or Bengali</b>! Try: <i>"Mera seat Section 301 Row 5 kahan hai?"</i>
+</div>
+
+</div>
+
+<div class="input-area">
+
+<input type="text" id="userInput" placeholder="Ask anything — seat, food, gate, bus..." autocomplete="off">
+
+<button onclick="sendMessage()" aria-label="Send">➤</button>
+
+</div>
+
+</div>
+
+<script src="api-client.js"></script>
+<script src="bot1.js"></script>
+
+</body>
+</html>

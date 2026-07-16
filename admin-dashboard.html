@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard — Stadium Control</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <nav class="topbar admin">
+    <div>
+      <h1>⚙️ Stadium Control Panel</h1>
+      <p id="adminName">Administration</p>
+    </div>
+    <div class="topbar-actions">
+      <button onclick="loadStats()">↻ Refresh</button>
+      <button class="danger" id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <main class="dashboard">
+    <section class="stats-grid" id="statsGrid"></section>
+
+    <section class="panel">
+      <h2>🚪 Live Gates</h2>
+      <div id="gatesTable" class="table-wrap"></div>
+    </section>
+
+    <section class="panel">
+      <h2>🚌 Transport Optimization</h2>
+      <div id="transportTable" class="table-wrap"></div>
+    </section>
+
+    <section class="panel">
+      <h2>🤖 System Recommendations</h2>
+      <div id="recommendations" class="rec-list"></div>
+    </section>
+  </main>
+
+  <script src="api-client.js"></script>
+  <script src="admin-dashboard.js"></script>
+</body>
+</html>

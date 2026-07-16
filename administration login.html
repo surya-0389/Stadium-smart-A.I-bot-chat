@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Admin Login — Stadium AI</title>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous" />
+      <link rel="stylesheet" href="administration login.css">
+    </head>
+    <body>
+        <div class="usr-login">
+            <h1 class="administration">Administration Login</h1>
+            <p>Stadium Control Panel</p>
+            <p id="errorMsg" style="color:#ff6b6b;font-size:13px;min-height:18px;"></p>
+
+            <div class="input-box">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" id="username" placeholder="Username" value="admin1">
+            </div>
+            <div class="input-box">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" id="password" placeholder="Password" value="admin123">
+            </div>
+
+            <button id="loginBtn">Sign In</button>
+
+            <p class="signup" style="font-size:12px;opacity:0.8;margin-top:16px;">
+              Demo: admin1 / admin123
+            </p>
+       </div>
+
+    <script src="api-client.js"></script>
+    <script>
+      document.getElementById("loginBtn").addEventListener("click", async () => {
+        const err = document.getElementById("errorMsg");
+        err.textContent = "";
+        try {
+          await handleLogin(
+            document.getElementById("username").value.trim(),
+            document.getElementById("password").value,
+            "admin"
+          );
+        } catch (e) {
+          err.textContent = e.message;
+        }
+      });
+    </script>
+    </body>
+</html>

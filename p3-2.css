@@ -1,0 +1,63 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f172a,#1e293b,#111827);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    display:flex;
+    gap:50px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.card{
+    width:260px;
+    height:170px;
+    border-radius:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,0.25);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.35);
+
+    transition:.4s ease;
+    cursor:pointer;
+}
+
+.card a{
+    color:white;
+    text-decoration:none;
+    font-size:2rem;
+    font-weight:700;
+    transition:.4s ease;
+    text-shadow:2px 2px 8px black;
+}
+
+/* Hover Effect */
+
+.card:hover{
+    transform:scale(1.12);
+    background:linear-gradient(135deg,#00d2ff,#3a7bd5);
+    box-shadow:0 0 35px #00d2ff;
+}
+.card:hover a {
+    font-size:2.4rem;
+    letter-spacing:1px;
+}
+.card:active {
+    transform:scale(1.05);
+}

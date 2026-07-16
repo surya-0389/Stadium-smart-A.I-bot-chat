@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Dashboard — Crowd Management</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+  <nav class="topbar">
+    <div>
+      <h1>🏟️ Crowd Management</h1>
+      <p id="staffName">Staff Portal</p>
+    </div>
+    <div class="topbar-actions">
+      <button onclick="loadData()">↻ Refresh</button>
+      <button class="danger" id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <main class="dashboard">
+    <section class="cards" id="gateCards"></section>
+
+    <section class="panel">
+      <h2>🤖 AI Recommendations</h2>
+      <div id="recommendations" class="rec-list"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Update Gate Crowd</h2>
+      <form id="updateForm" class="form-row">
+        <select id="gateSelect"></select>
+        <input type="number" id="peopleCount" placeholder="People count" min="0">
+        <select id="crowdLevel">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+        <input type="text" id="note" placeholder="Note (optional)">
+        <button type="submit">Update Live</button>
+      </form>
+      <p id="formMsg" class="form-msg"></p>
+    </section>
+  </main>
+
+  <script src="api-client.js"></script>
+  <script src="staff-dashboard.js"></script>
+</body>
+</html>
