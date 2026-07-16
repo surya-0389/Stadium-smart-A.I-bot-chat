@@ -9,6 +9,6 @@
     "seed": "node backend/database/seed.js"
   },
   "engines": {
-    "node": ">=18"
+    "node": "20.x"
   }
 }
